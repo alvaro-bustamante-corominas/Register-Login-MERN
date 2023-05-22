@@ -25,6 +25,7 @@ function App() {
       <Route path='/dashboard' element={<DashBoard />} ></Route>
     </Routes>
     </UserContextProvider>
+    
   )
 }
 

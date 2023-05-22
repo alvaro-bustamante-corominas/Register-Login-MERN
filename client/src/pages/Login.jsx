@@ -32,11 +32,12 @@ export default function Login() {
   return (
     <div>
       <form onSubmit={loginUser}>
-      <label> Email</label>
+      <label> Login</label>
+      <p></p>
         <input type='email' placeholder='Enter email...' value={data.email} onChange={(e) => setData({...data, email: e.target.value})}  />
         <p></p>
-        <label> Password</label>
         <input type='password' placeholder='Enter password... ' value={data.password} onChange={(e) => setData({...data, password: e.target.value})}  />
+        <p></p>
         <button type='submit'> Login</button>
       </form>
     </div>

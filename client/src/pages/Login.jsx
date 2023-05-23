@@ -2,6 +2,7 @@ import { useState } from "react";
 import axios from 'axios'
 import {toast} from 'react-hot-toast'
 import { useNavigate } from "react-router-dom";
+import '../styles/form.css'
 
 export default function Login() {
   const navigate = useNavigate()
@@ -30,7 +31,7 @@ export default function Login() {
   }
 
   return (
-    <div>
+    <div className="form-container">
       <form onSubmit={loginUser}>
       <label> Login</label>
       <p></p>

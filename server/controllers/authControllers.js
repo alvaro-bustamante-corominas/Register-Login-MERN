@@ -13,20 +13,27 @@ const registerUser = async (req, res) =>{
         //Check if name was entered
         if(!name){
             return res.json({
-                error: 'name is required'
+                error: 'Name is required'
             })
         };
-        //Check if password is good
-        if(!password || password.length < 6){
+
+        if(!email){
             return res.json({
-                error: 'Password is required and should be al least 6 character long'
+                error: "Email is required"
             })
-        };
+        }
         //Check email
         const exist = await User.findOne({email})
         if(exist){
             return res.json({
                 error: 'Email is taken already'
+            })
+        };
+
+        //Check if password is good
+        if(!password || password.length < 6){
+            return res.json({
+                error: 'Password is required and should be al least 6 character long'
             })
         };
 

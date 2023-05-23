@@ -2,6 +2,7 @@ import { useState } from "react";
 import axios from 'axios';
 import {toast} from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
+import '../styles/form.css'
 
 export default function Register() {
   const navigate = useNavigate()
@@ -21,7 +22,7 @@ export default function Register() {
       } else {
         setData({})
         toast.success('Login successfull. Welcome!')
-        navigate('/login')
+       // navigate('/login')
       }
     } catch(error){
       console.log(error)
@@ -30,7 +31,7 @@ export default function Register() {
 
 
   return (
-    <div>
+    <div className="form-container">
       <form onSubmit={registerUser}>
         <label> Sign up</label>
         <p></p>

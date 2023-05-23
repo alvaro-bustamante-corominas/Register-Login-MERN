@@ -16,6 +16,9 @@ It has been created usign MERN
  - React as the front-end
  - Node.js as the back-end
 
+<img src="assets/image6.jpg" alt="MERN" width="500">
+
+
 ## Installation
 
 
